@@ -131,8 +131,10 @@ table {
 /* Less Stuff */
 html,
 body {
+  display: flex;
+  flex-direction: column;
   background-color: white;
-  height: 100%;
+  height: 160%;
 }
 header {
   display: flex;
@@ -181,6 +183,7 @@ header .banner > div.headCon.banner img {
   justify-content: left ;
 }
 /* Desktop t0 be written over */
+/*Header Container        */
 .banner > div.bandCon {
   display: flex;
   flex-direction: row-reverse;
@@ -209,6 +212,22 @@ div.bandCon > div.band {
   display: flex;
   justify-content: right;
 }
+/*Bottom Header Container */
+.bottom-header {
+  margin: 0 6vw;
+  height: 40vh;
+  background-color: blue;
+}
+.bottom-header button {
+  margin-left: 350px;
+  background-color: green;
+  height: 7vh;
+}
+.bottom-header p {
+  margin-left: 220px;
+  margin-right: 120px;
+}
+/* Other bottom-header Break Points */
 /* Classes */
 .blinking {
   font-size: 1.5rem;
