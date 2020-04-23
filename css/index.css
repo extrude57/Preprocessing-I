@@ -85,7 +85,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -129,17 +129,31 @@ table {
 * {
   box-sizing: border-box;
 }
+/* Variables */
+/*  Mixins */
+/* Less Stuff */
 html,
 body {
   background-color: white;
   height: 100%;
 }
-header {
-  margin: 0px 140px;
-  height: 50vh;
-  background-color: rgba(148, 147, 151, 0.384);
-}
+html h1,
 body h1 {
   margin: 25px;
   color: green;
 }
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  margin: 0 6vw;
+  height: 50vh;
+  background-color: rgba(148, 147, 151, 0.384);
+}
+header div.headCon {
+  margin: 0 6vw;
+  height: 30vh;
+  background-color: rgba(150, 150, 158, 0.582);
+}
+/* Classes */

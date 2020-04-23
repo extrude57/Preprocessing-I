@@ -19,7 +19,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -52,43 +52,75 @@ table {
     box-sizing: border-box;
 }
 //  rgba(241, 227, 227, 0.925);
-//  rgb(188, 185, 209); 
+//  rgb(188, 185, 209);
+
+
+
+/* Variables */
 @body-color: white;
 @header-color: rgba(148, 147, 151, 0.384);
 
 
+/*  Mixins */
+
 .thebody(){
 	background-color: @body-color;
+	height: 100%;
 	
-    height: 100%;
+	h1{
+		margin:25px;
+		color:green;
+	
+	}
+
 
 
 }
 .header(){
-	margin: 0px 140px; 
+	margin: 0 6vw; 
 	height: 50vh;
 	background-color:@header-color;
 }
 
+
+
+
+
+
+/* Less Stuff */
 html, body {
 	.thebody();
+
 }
 
 
 
 header{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: space-between;
 	.header();
+
+	div.headCon{
+	margin: 0 6vw; 
+	height: 30vh;
+	background-color: rgba(150, 150, 158, 0.582);
+	}
+
 	
 }
-body{
-h1{
-	margin:25px;
-	color:green;
-
-}
 
 
-}
+
+/* Classes */
+
+
+
+
+
+
+
 
 
 
