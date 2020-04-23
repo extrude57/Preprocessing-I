@@ -9,11 +9,7 @@ span,
 applet,
 object,
 iframe,
-h2,
-h3,
-h4,
 h5,
-h6,
 p,
 blockquote,
 pre,
@@ -155,5 +151,20 @@ header div.headCon {
   margin: 0 6vw;
   height: 30vh;
   background-color: rgba(150, 150, 158, 0.582);
+}
+header div.headCon > .banner-text h1 {
+  margin: 0;
+  text-shadow: 2px 2px 6px #000;
+  text-align: center;
+}
+header div.headCon > .banner-text h2 {
+  margin: 0;
+  text-shadow: 2px 2px 6px #000;
+  text-align: center;
+}
+header div.headCon > .banner-text h3 {
+  margin: 0;
+  text-shadow: 2px 2px 6px #000;
+  text-align: center;
 }
 /* Classes */
