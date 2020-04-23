@@ -180,29 +180,47 @@ header .banner > div.headCon.banner img {
   margin: 0;
   justify-content: left ;
 }
+.blinking {
+  animation: blinkingText 1.2s infinite;
+}
+@keyframes blinkingText {
+  0% {
+    color: #000;
+  }
+  49% {
+    color: #000;
+  }
+  60% {
+    color: transparent;
+  }
+  99% {
+    color: transparent;
+  }
+  100% {
+    color: #000;
+  }
+}
 /* Classes */
 .banner > div.bandCon {
-  flex-direction: column;
   display: flex;
-  justify-content: right;
-  align-items: right;
-  margin-left: 66vw;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 100%;
+  margin-right: 6vw;
 }
 .band > div.banner-item > button {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.927);
 }
 div.bandCon > div.band {
   display: flex;
-  flex-direction: row;
-  align-self: right;
+  flex-direction: row-reverse;
   box-sizing: border-box;
-  width: 16vw;
-  height: 18vh;
-  background-color: purple;
+  width: 46vw;
+  height: 13vh;
+  background-color: rgba(128, 0, 128, 0.219);
   border: 2px solid black;
 }
 .band > .banner-item {
   display: flex;
   justify-content: right;
-  align-items: right;
 }
