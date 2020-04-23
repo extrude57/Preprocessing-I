@@ -135,8 +135,9 @@ body {
   height: 100%;
 }
 header {
-  height: 30vh;
-  background-color: #bcb9d1;
+  margin: 0px 140px;
+  height: 50vh;
+  background-color: rgba(148, 147, 151, 0.384);
 }
 body h1 {
   margin: 25px;

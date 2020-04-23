@@ -54,7 +54,7 @@ table {
 //  rgba(241, 227, 227, 0.925);
 //  rgb(188, 185, 209); 
 @body-color: white;
-@header-color: rgb(188, 185, 209);
+@header-color: rgba(148, 147, 151, 0.384);
 
 
 .thebody(){
@@ -64,7 +64,11 @@ table {
 
 
 }
-
+.header(){
+	margin: 0px 140px; 
+	height: 50vh;
+	background-color:@header-color;
+}
 
 html, body {
 	.thebody();
@@ -73,8 +77,7 @@ html, body {
 
 
 header{
-	height: 30vh;
-	background-color:@header-color;
+	.header();
 	
 }
 body{
@@ -83,6 +86,8 @@ h1{
 	color:green;
 
 }
+
+
 }
 
 
