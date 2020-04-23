@@ -163,19 +163,8 @@ header{
 	
 }
 
-.blinking{
-    animation:blinkingText 1.2s infinite;
-}
-@keyframes blinkingText{
-    0%{     color: #000;    }
-    49%{    color: #000; }
-    60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: #000;    }
-}
 
-
-/* Classes */
+/* Desktop t0 be written over */
 // Outter shell of Navigation bar
 .banner > div.bandCon{
 	// Use block display margin-left instead to get extra room for another container at the top like a marque scroll
@@ -189,6 +178,12 @@ header{
 }
 // Navigation Bar Button Styles
 .band > div.banner-item > button{
+	font-size:1.7rem;
+	text-shadow: 2px 4px 6px blue;
+
+	font-weight: bold;
+	color:green;
+	width:130px;
 	background-color: rgba(255, 0, 0, 0.927);
 }
 // The actual Navbar Flex configurations will move the navbar buttons
@@ -200,7 +195,7 @@ header{
 	  box-sizing: border-box;
 	width:46vw;
 	height:13vh;
-	background-color: rgba(128, 0, 128, 0.219);
+	background-color: rgba(24, 172, 218, 0.219);
 	border:2px solid black;
   }
   .band > .banner-item{
@@ -208,6 +203,27 @@ header{
 	justify-content:right;
 	//align-items: right;
   }
+
+
+
+
+
+/* Classes */
+.blinking{
+	
+	font-size: 1.5rem;
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: rgb(223, 53, 53);    }
+    49%{    color: rgb(240, 117, 35); }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: rgb(240, 38, 132);    }
+}
+
+/* Breakpoints for blinking*/
+
 
 
 
