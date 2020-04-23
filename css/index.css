@@ -131,13 +131,14 @@ table {
 }
 html,
 body {
+  background-color: white;
   height: 100%;
 }
 header {
   height: 30vh;
-  background-color: slateblue;
+  background-color: #bcb9d1;
 }
 body h1 {
   margin: 25px;
-  color: red;
+  color: green;
 }

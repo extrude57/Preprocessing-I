@@ -51,22 +51,36 @@ table {
 * {
     box-sizing: border-box;
 }
+//  rgba(241, 227, 227, 0.925);
+//  rgb(188, 185, 209); 
+@body-color: white;
+@header-color: rgb(188, 185, 209);
+
+
+.thebody(){
+	background-color: @body-color;
+	
+    height: 100%;
+
+
+}
+
 
 html, body {
-    height: 100%;
+	.thebody();
 }
 
 
 
 header{
 	height: 30vh;
-	background-color:slateblue
+	background-color:@header-color;
 	
 }
 body{
 h1{
 	margin:25px;
-	color:red;
+	color:green;
 
 }
 }
