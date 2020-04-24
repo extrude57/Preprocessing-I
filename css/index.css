@@ -50,7 +50,6 @@ fieldset,
 form,
 label,
 legend,
-table,
 caption,
 tbody,
 tfoot,
@@ -244,8 +243,74 @@ div.bandCon > div.band {
   margin-left: 4vw;
   width: 35vw;
   height: 45vh;
+  /*The skills table */
+}
+.two-call .two-call-con table {
+  margin: 0em;
+  width: 100%;
+  height: 100%;
+}
+.two-call .two-call-con table,
+.two-call .two-call-con th,
+.two-call .two-call-con td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.two-call .two-call-con th,
+.two-call .two-call-con td {
+  padding: 15px;
+  text-align: left;
+}
+.two-call .two-call-con table.t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+.two-call .two-call-con table.t01 tr:nth-child(odd) {
+  background-color: #fff;
+}
+.two-call .two-call-con table.t01 th {
+  background-color: black;
+  color: white;
+}
+/* The work history Row */
+#workHistory {
+  display: flex;
+  flex-direction: column;
+}
+#workHistory h2 {
+  margin-left: 16vw;
+}
+#workHistory table {
+  margin: 3em 0em 0em 7em;
+  width: 70%;
+  height: 100%;
+}
+#workHistory table,
+#workHistory th,
+#workHistory td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+#workHistory th,
+#workHistory td {
+  padding: 15px;
+  text-align: left;
+}
+#workHistory table.t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+#workHistory table.t01 tr:nth-child(odd) {
+  background-color: #fff;
+}
+#workHistory table.t01 th {
+  background-color: black;
+  color: white;
+}
+.workCon {
+  width: 80vw;
+  height: 50vh;
 }
 /*  Elements */
+/* Margin, table width, table height  */
 /* Classes */
 .blinking {
   font-size: 1.5rem;
