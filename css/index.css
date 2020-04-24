@@ -13,7 +13,6 @@ h5,
 p,
 blockquote,
 pre,
-a,
 abbr,
 acronym,
 address,
@@ -133,7 +132,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: white;
-  height: 160%;
+  height: 280%;
 }
 header {
   display: flex;
@@ -280,7 +279,7 @@ div.bandCon > div.band {
   margin-left: 16vw;
 }
 #workHistory table {
-  margin: 3em 0em 0em 7em;
+  margin: 1em 0em 0em 7em;
   width: 70%;
   height: 100%;
 }
@@ -305,12 +304,35 @@ div.bandCon > div.band {
   background-color: black;
   color: white;
 }
-.workCon {
+table.workCon {
   width: 80vw;
   height: 50vh;
 }
 /*  Elements */
 /* Margin, table width, table height  */
+/* Bottom Footer  */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+footer div#footNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18vh;
+  width: 68vw;
+  height: 20vh;
+  background-color: grey;
+}
+footer div#footNav a {
+  text-shadow: 1px 3px 4px blue;
+  line-height: 0.7rem;
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: underline wavy red;
+  height: 0%;
+}
 /* Classes */
 .blinking {
   font-size: 1.5rem;

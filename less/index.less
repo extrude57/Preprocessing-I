@@ -4,8 +4,7 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe, h5 , p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+html, body, div, span, applet, object, iframe, h5 , p, blockquote, pre, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -71,7 +70,7 @@ table {
 	display:flex;
 	flex-direction: column;
 	background-color: @body-color;
-	height: 160%;
+	height: 280%;
 	
 	
 
@@ -265,10 +264,10 @@ margin-left: 11vw;
 	h2{
 		margin-left:16vw;
 	}
-	.table(3em 0em 0em 7em,70%,100%);
+	.table(1em 0em 0em 7em,70%,100%);
 }
 
-.workCon{
+table.workCon{
 	
 	width:80vw;
 	height: 50vh;
@@ -299,6 +298,31 @@ table.t01 th {
   background-color: black;
   color: white;
 }
+}
+
+/* Bottom Footer  */
+footer{
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	div#footNav{
+		display: flex;
+			align-items: center;
+			justify-content: center;
+		margin-top:18vh;
+		width:68vw;
+		height:20vh;
+		background-color: grey;
+		a{
+			text-shadow: 1px 3px 4px blue;
+			line-height: .7rem;
+			font-weight: bold;
+			font-size:2rem;
+			text-decoration: underline wavy red;
+			
+			height:0%;
+		}
+	}
 }
 
 
