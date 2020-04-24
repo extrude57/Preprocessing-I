@@ -228,7 +228,10 @@ div.bandCon > div.band {
   width: 19vw;
 }
 .bottom-header p {
-  font-size: 1.2rem;
+  text-shadow: 2px 3px 2px black;
+  color: rgba(32, 116, 32, 0.774);
+  font-family: 'Frijole', cursive;
+  font-size: 2rem;
   margin-left: 220px;
   margin-right: 120px;
 }
@@ -317,6 +320,8 @@ footer {
   align-self: center;
 }
 footer div#footNav {
+  box-shadow: 2px 3px 4px black;
+  border: 0.09em solid blue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -337,6 +342,17 @@ footer div#footNav a {
 .blinking {
   font-size: 1.5rem;
   animation: blinkingText 1.2s infinite;
+  /* Breakpoints for blinking*/
+}
+@media (max-width: 1375px) {
+  .blinking {
+    font-size: 1.2rem;
+  }
+}
+@media (max-height: 798px) {
+  .blinking {
+    font-size: 1.2rem;
+  }
 }
 @keyframes blinkingText {
   12% {
@@ -354,5 +370,4 @@ footer div#footNav a {
   100% {
     color: #f02684;
   }
-  /* Breakpoints for blinking*/
 }

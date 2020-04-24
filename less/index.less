@@ -64,6 +64,14 @@ table {
 @bH: repeating-radial-gradient(red, yellow 10%, green 15%);
 @bhG:  radial-gradient(red, yellow, green);
 
+
+
+@mobileFnt:'Monoton', cursive;
+
+
+@desk1375X798:~ '(max-width:1375px)and(max-height:798px)';
+
+
 /*  Mixins */
 
 .thebody(){
@@ -229,7 +237,10 @@ header{
 		width:19vw;
 	}
 	p{
-		font-size:1.2rem;
+		text-shadow: 2px 3px 2px black;
+		color: rgba(32, 116, 32, 0.774);
+		font-family: 'Frijole', cursive;
+		font-size:2rem;
 		margin-left:220px;
 		margin-right:120px;
 
@@ -302,10 +313,13 @@ table.t01 th {
 
 /* Bottom Footer  */
 footer{
+	
 	display: flex;
 	flex-direction: column;
 	align-self: center;
 	div#footNav{
+		box-shadow: 2px 3px 4px black;
+		border: .09em solid blue;
 		display: flex;
 			align-items: center;
 			justify-content: center;
@@ -322,6 +336,7 @@ footer{
 			
 			height:0%;
 		}
+
 	}
 }
 
@@ -330,7 +345,14 @@ footer{
 .blinking{
 	
 	font-size: 1.5rem;
-    animation:blinkingText 1.2s infinite;
+	animation:blinkingText 1.2s infinite;
+		/* Breakpoints for blinking*/
+		@media(max-width:1375px){
+			font-size:1.2rem;
+		}
+		@media(max-height:798px){
+			font-size:1.2rem;
+		}
 }
 @keyframes blinkingText{
     12%{     color: rgb(223, 53, 53);    }
@@ -338,7 +360,7 @@ footer{
     60%{    color: transparent; }
     99%{    color:transparent;  }
 	100%{   color: rgb(240, 38, 132);    }
-	/* Breakpoints for blinking*/
+
 
 
 }
