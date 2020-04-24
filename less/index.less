@@ -255,6 +255,32 @@ margin-left: 11vw;
 }
 
 
+/*  Elements */
+.table(){
+    table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+table#t01 th {
+  background-color: black;
+  color: white;
+}
+}
+
+
 /* Classes */
 .blinking{
 	
@@ -266,10 +292,13 @@ margin-left: 11vw;
     49%{    color: rgb(240, 117, 35); }
     60%{    color: transparent; }
     99%{    color:transparent;  }
-    100%{   color: rgb(240, 38, 132);    }
+	100%{   color: rgb(240, 38, 132);    }
+	/* Breakpoints for blinking*/
+
+
 }
 
-/* Breakpoints for blinking*/
+
 
 
 

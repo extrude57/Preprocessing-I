@@ -245,6 +245,7 @@ div.bandCon > div.band {
   width: 35vw;
   height: 45vh;
 }
+/*  Elements */
 /* Classes */
 .blinking {
   font-size: 1.5rem;
@@ -266,5 +267,5 @@ div.bandCon > div.band {
   100% {
     color: #f02684;
   }
+  /* Breakpoints for blinking*/
 }
-/* Breakpoints for blinking*/
