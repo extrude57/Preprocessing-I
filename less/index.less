@@ -108,7 +108,7 @@ table {
 
 @media @bp1{
 	margin: 0 6vw; 
-	height: 140vh;
+	height: 100vh;
 	background-color:@header-color;
 }
 	
@@ -174,6 +174,103 @@ table {
 		text-align: left;
 	}
 }
+
+// Banner outside display settings
+.banner(){
+	width:auto;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// header > bandCon
+.bandCon(@d,@bp1){
+	@media @d{
+		// Use block display margin-left instead to get extra room for another container at the top like a marque scroll
+	// Puts the navbar in the upper right corner
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	//flex-wrap: wrap;
+  height: 100%;
+  margin-right:6vw;
+	}
+
+	@media @bp1{
+		// Use block display margin-left instead to get extra room for another container at the top like a marque scroll
+	// Puts the navbar in the upper right corner
+	display: flex;
+	flex-direction: row;
+	//align-items: center;
+	//flex-wrap: wrap;
+  height: 100%;
+  margin-right:1vw;
+	}
+
+
+}
+// The organization of the navigation bar
+.band(){
+	display: flex;
+			flex-direction: row-reverse;
+			//align-self: right;
+			box-sizing: border-box;
+			
+			background-color: rgba(24, 172, 218, 0.219);
+			border:2px solid black;
+}
+// Adjusts the buttons in the navbar
+.banner-item(){
+	//  margin:0 auto;
+	display: flex;
+	justify-content:right;
+	///////align-items: right;
+}
+
+// banner-item > button
+.bannerItem-button(){
+	font-size:1.7rem;
+	text-shadow: 2px 4px 6px blue;
+
+	font-weight: bold;
+	color:green;
+	// Make the buttons bigger 
+	//height:120px;
+	width:130px;
+	background-color: rgba(255, 0, 0, 0.927);
+}
+// The bottom header button 
+.btmHeader-button(){
+	box-shadow: 2px 1px 4px blue;
+		font-weight:bolder;
+		text-shadow: 2px 4px 3px  red ;
+		font-size:1.7rem;
+		margin-left:200px;
+		background-color: green;
+		height:7vh;
+		width:19vw;
+}
+// The paragraph in bottom header
+.btmHeader-p(){
+	text-shadow: 2px 3px 2px black;
+		color: rgba(32, 116, 32, 0.774);
+		font-family: 'Frijole', cursive;
+		font-size:2rem;
+		margin-left:220px;
+		margin-right:120px;
+}
+
+// header.banner > h3
+.h3(){
+	margin-left: 388px;
+		margin-right:75px;
+		text-shadow: 2px 2px 6px #000;
+		text-align: center;
+}
+
+
+/// The bottom header
 .bottom-header(){
 
 	margin: 0 6vw; 
@@ -257,6 +354,23 @@ header{
 	// Basic header Display
 	.headerDis(@dp,@bp1);
 	
+/* Desktop t0 be written over */
+/*Header Container        */
+// Outter shell of Navigation bar
+ div.bandCon{
+	 // Layout for the Nav container
+	.bandCon(@dp,@bp1);
+  		div.band{
+			.band();
+			// Makes the acutal Navbar Container Wider
+			.nav-mv(@bp1nav-mv, @bp2nav-mv, @bp3nav-mv);
+			//position of buttons
+				.banner-item{
+						.banner-item();
+					}
+		}
+}
+
 	div.headCon{
 	.headCon(@dp,@bp1);
 			.banner-text h1 {
@@ -274,23 +388,14 @@ header{
 
 	  
  // Below the center area with text
-	  // What you do as a hired personal
+	  // What you do as a hired personal area can shrink dark grey center area
 	   .banner{
-		height: 300px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		  .banner();
 	  }
 
-	 
-	  
-
-
+	 // What you generally do heading location positioning settings
 	   h3 {
-		margin-left: 388px;
-		margin-right:75px;
-		text-shadow: 2px 2px 6px #000;
-		text-align: center;
+		.h3();
 	  }
 
 	  // Attempt to add image to side of innner banner 
@@ -301,61 +406,14 @@ header{
 			  .nav-img-mv(@imgbpD, @imgbpT, @imgbpTh)
 		  }
 
-	  
-	  
-	  
-
-
 	
 }
 
 
-/* Desktop t0 be written over */
-/*Header Container        */
-// Outter shell of Navigation bar
-.banner > div.bandCon{
-	// Use block display margin-left instead to get extra room for another container at the top like a marque scroll
-	// Puts the navbar in the upper right corner
-	display: flex;
-	flex-direction: row-reverse;
-	align-items: center;
-	//flex-wrap: wrap;
-  height: 100%;
-  margin-right:6vw;
-  		div.band{
-			display: flex;
-			flex-direction: row-reverse;
-			
-			//align-self: right;
-			box-sizing: border-box;
-			// Makes the acutal Navbar Container Wider
-			.nav-mv(@bp1nav-mv, @bp2nav-mv, @bp3nav-mv);
-			
-			background-color: rgba(24, 172, 218, 0.219);
-			border:2px solid black;
 
-			//position of buttons
-				.banner-item{
-						//  margin:0 auto;
-						display: flex;
-						justify-content:right;
-						///////align-items: right;
-					}
-		}
- 
-	
-}
 // Navigation Bar Button Styles
 .band > div.banner-item > button{
-	font-size:1.7rem;
-	text-shadow: 2px 4px 6px blue;
-
-	font-weight: bold;
-	color:green;
-	// Make the buttons bigger 
-	//height:120px;
-	width:130px;
-	background-color: rgba(255, 0, 0, 0.927);
+	.bannerItem-button();
 }
 // The actual Navbar Flex configurations will move the navbar buttons
  @bp1nav-mv: ~'(max-width:2300px)'; 
@@ -368,22 +426,10 @@ header{
 .bottom-header{
 	.bottom-header();
 	button{
-		box-shadow: 2px 1px 4px blue;
-		font-weight:bolder;
-		text-shadow: 2px 4px 3px  red ;
-		font-size:1.7rem;
-		margin-left:200px;
-		background-color: green;
-		height:7vh;
-		width:19vw;
+		.btmHeader-button();
 	}
 	p{
-		text-shadow: 2px 3px 2px black;
-		color: rgba(32, 116, 32, 0.774);
-		font-family: 'Frijole', cursive;
-		font-size:2rem;
-		margin-left:220px;
-		margin-right:120px;
+		.btmHeader-p();
 
 	}
 
