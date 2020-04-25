@@ -97,14 +97,83 @@ table {
 	height: 310%;
 
 }
-.header(){
+// The basics of header
+.header(@dp, @bp1){
 	
+@media @dp{
 	margin: 0 6vw; 
 	height: 90vh;
 	background-color:@header-color;
+}
+
+@media @bp1{
+	margin: 0 6vw; 
+	height: 140vh;
+	background-color:@header-color;
+}
 	
 }
 
+	.headerDis(@d,@bp1){
+
+		@media @d{
+			display:flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: space-between;
+		}
+		@media @bp1{
+			display:flex;
+			flex-direction: column;
+		
+		}
+
+
+	}
+// header > div.headCon
+	.headCon(@d,@bp1){
+		@media @d{
+			margin: 0 6vw; 
+	height: 40vh;
+	background-color: rgba(150, 150, 158, 0.582);
+		}
+		@media @bp1{
+			margin: 0 6vw; 
+	height: 40vh;
+	background-color: rgba(150, 150, 158, 0.582);
+		}
+	}
+
+// header > div.headCon > .banner-text h1
+.bantxth1(@d,@b1){
+	@media @d{
+		//margin-left:55px;
+		color:green;
+		margin-left: 200px;
+		text-shadow: 2px 2px 6px #000;
+		text-align: center;
+	}
+	@media @b1{
+		//margin-left:55px;
+		color:green;
+		margin-left: 200px;
+		text-shadow: 2px 2px 6px #000;
+		text-align: center;
+	}
+}
+// header > div.headCon > .banner-text h2
+.bantxth2(@d,@b1){
+	@media @d{
+		margin-left:70px ;
+		text-shadow: 2px 2px 6px #000;
+		text-align: center;
+	}
+	@media @b1{
+		margin-left:70px ;
+		text-shadow: 2px 2px 6px #000;
+		text-align: left;
+	}
+}
 .bottom-header(){
 
 	margin: 0 6vw; 
@@ -129,8 +198,17 @@ table {
 	@media @sbp{width:76vw;height:13vh;padding:.2vw;}
 	@media @sbpM{width:100vw;height:13vh; padding:.2vw;margin-top: 100px;}
 
-	//863 580 || 905 652
+	//863 580 || 820 643
 }
+
+// .banner > div.bandCon mixin
+.head(@bp1, @bp2){
+
+
+
+}
+
+
 //Readjusting the Nav
 .nav-img-mv(@bpimg,@bpimgT,@bpimgTh){
 @media @bpimg{
@@ -171,50 +249,41 @@ html, body {
 
 
 header{
-	display:flex;
-	flex-direction: column;
-	justify-content: center;
-	align-content: space-between;
-	.header();
+	/*  header variables */
+	@dp: ~'(max-width:2000px)';
+	@bp1: ~'(max-width:820px)';
+	// Basic header properties
+	.header(@dp, @bp1);
+	// Basic header Display
+	.headerDis(@dp,@bp1);
 	
 	div.headCon{
-	margin: 0 6vw; 
-	height: 40vh;
-	background-color: rgba(150, 150, 158, 0.582);
-	}
+	.headCon(@dp,@bp1);
+			.banner-text h1 {
+				.bantxth1(@dp,@bp1);
+			  }
 
 // The Headings Text Name & What you do or something cleaver 
-	div.headCon > .banner-text h1 {
-		
-			//margin-left:55px;
-			color:green;
-		margin-left: 200px;
-		text-shadow: 2px 2px 6px #000;
-		text-align: center;
-	  }
+			.banner-text h2{
+				.bantxth2(@dp,@bp1);
+			}
+	}
 
-	  div.headCon > .banner-text h2 {
-		margin-left:70px ;
-		text-shadow: 2px 2px 6px #000;
-		text-align: center;
-	  }
+	
+
+
 	  
-
-	  div.headCon .banner{
-	//	height: 300px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	  }
-
-	  // Below the center area with text
+ // Below the center area with text
 	  // What you do as a hired personal
-	  .banner {
+	   .banner{
 		height: 300px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	  }
+
+	 
+	  
 
 
 	   h3 {
@@ -250,9 +319,30 @@ header{
 	display: flex;
 	flex-direction: row-reverse;
 	align-items: center;
-	flex-wrap: wrap;
+	//flex-wrap: wrap;
   height: 100%;
   margin-right:6vw;
+  		div.band{
+			display: flex;
+			flex-direction: row-reverse;
+			
+			//align-self: right;
+			box-sizing: border-box;
+			// Makes the acutal Navbar Container Wider
+			.nav-mv(@bp1nav-mv, @bp2nav-mv, @bp3nav-mv);
+			
+			background-color: rgba(24, 172, 218, 0.219);
+			border:2px solid black;
+
+			//position of buttons
+				.banner-item{
+						//  margin:0 auto;
+						display: flex;
+						justify-content:right;
+						///////align-items: right;
+					}
+		}
+ 
 	
 }
 // Navigation Bar Button Styles
@@ -271,23 +361,7 @@ header{
  @bp1nav-mv: ~'(max-width:2300px)'; 
  @bp2nav-mv: ~'(max-width:863px)'; 
  @bp3nav-mv: ~'(max-width:700px)'; 
-div.bandCon > div.band{
-	display: flex;
-	flex-direction: row-reverse;
-	
-	//align-self: right;
-	  box-sizing: border-box;
-	// Makes the acutal Navbar Container Wider
-	.nav-mv(@bp1nav-mv, @bp2nav-mv, @bp3nav-mv);
-	
-	background-color: rgba(24, 172, 218, 0.219);
-	border:2px solid black;
-  }
-  .band > .banner-item{
-	display: flex;
-	justify-content:right;
-	//align-items: right;
-  }
+
 
 
 /*Bottom Header Container */
@@ -419,12 +493,8 @@ footer{
 	
 	//font-size: 1.5rem;
 	animation:blinkingText 1.2s infinite;
-		
-		
+		// Blinkings Font Breakpoints
 	.blink-res(@bp1, @bp2, @bp3, @bp4, @bp5);
-
-
-
 
 }
 
