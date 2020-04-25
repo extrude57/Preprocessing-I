@@ -80,6 +80,14 @@ table {
 //@mobile798: ~'(max-width:798px)';
 
 
+
+// Navbar configuration variables
+@navW: 46vw;
+@navH:13vh;
+
+
+
+
 /*  Mixins */
 
 .thebody(){
@@ -104,16 +112,53 @@ table {
 	background-image:@bottomH-color;
 }
 
-// is the responsive control for blinking text in navigator
+// is the responsive mixin control for blinking text in the headers navigator
 
-.blink-res(@wide, @desk, @tab, @mob ){
-	@media @wide{font-size:12.6rem;}
-	@media @desk{font-size:12.4rem;}
-	@media @tab{font-size:12rem;}
-	@media @mob{font-size:13rem;}
+.blink-res(@wide, @desk, @tab, @mob, @non ){
+	@media @wide{font-size:2.4rem;}
+	@media @desk{font-size:2rem;}
+	@media @tab{font-size:1.3rem;}
+	@media @mob{font-size:0.6rem;}
+	@media @mob{font-size:0rem;}
 }
+/// Navbar configuration
+
+.nav-mv(@fbDft, @sbp, @sbpM){
+
+	@media @fbDft{width:76vw;height: 13vh;padding:.2vw;}
+	@media @sbp{width:76vw;height:13vh;padding:.2vw;}
+	@media @sbpM{width:100vw;height:13vh; padding:.2vw;margin-top: 100px;}
+
+	//863 580 || 905 652
+}
+//Readjusting the Nav
+.nav-img-mv(@bpimg,@bpimgT,@bpimgTh){
+@media @bpimg{
+	width:200px;
+			  margin:0;
+			  justify-content:left ;
+			}
+
+		@media @bpimgT{
+			padding:2vh 2vw;
+			height:auto;
+				width:100px;
+						  margin-top:9vh;
+						  justify-content:left ;
+					}
+
+		@media @bpimgTh{
+			padding:2vh 2vw;
+			height:auto;
+				width:100px;
+						 margin-top:16vh;
+						 justify-content:left ;
+							}
+
+//794 X 503
 
 
+		}
 
 
 
@@ -180,13 +225,14 @@ header{
 	  }
 
 	  // Attempt to add image to side of innner banner 
-	  .banner > div.headCon.banner{
-		  img{
-			  margin:0;
-			  justify-content:left ;
+		  @imgbpD: ~'(max-width:2000px)';
+		  @imgbpT: ~'(max-width:930px)';
+		  @imgbpTh: ~'(max-height:530px)';
+	    img{
+			  .nav-img-mv(@imgbpD, @imgbpT, @imgbpTh)
 		  }
 
-	  }
+	  
 	  
 	  
 
@@ -204,6 +250,7 @@ header{
 	display: flex;
 	flex-direction: row-reverse;
 	align-items: center;
+	flex-wrap: wrap;
   height: 100%;
   margin-right:6vw;
 	
@@ -215,18 +262,24 @@ header{
 
 	font-weight: bold;
 	color:green;
+	// Make the buttons bigger 
+	//height:120px;
 	width:130px;
 	background-color: rgba(255, 0, 0, 0.927);
 }
 // The actual Navbar Flex configurations will move the navbar buttons
-   div.bandCon > div.band{
+ @bp1nav-mv: ~'(max-width:2300px)'; 
+ @bp2nav-mv: ~'(max-width:863px)'; 
+ @bp3nav-mv: ~'(max-width:700px)'; 
+div.bandCon > div.band{
 	display: flex;
 	flex-direction: row-reverse;
 	
 	//align-self: right;
 	  box-sizing: border-box;
-	width:46vw;
-	height:13vh;
+	// Makes the acutal Navbar Container Wider
+	.nav-mv(@bp1nav-mv, @bp2nav-mv, @bp3nav-mv);
+	
 	background-color: rgba(24, 172, 218, 0.219);
 	border:2px solid black;
   }
@@ -355,9 +408,11 @@ footer{
 }
 /* Blinkings font-breakpoints */
 @bp1: ~'(max-width: 2000px)';
-@bp2: ~'(max-width: 1000px)';
-@bp3: ~'(max-width: 700px)';
-
+@bp2: ~'(max-width: 1115px)';
+// Where the navigiator needs to stretch wider
+@bp3: ~'(max-width: 1018px)';
+@bp4: ~'(max-width: 810px)';
+@bp5: ~'(max-width: 745px)';
 
 /* Classes */
 .blinking{
@@ -366,7 +421,7 @@ footer{
 	animation:blinkingText 1.2s infinite;
 		
 		
-	.blink-res(@bp1, @bp2, @bp3, @bp3 );
+	.blink-res(@bp1, @bp2, @bp3, @bp4, @bp5);
 
 
 

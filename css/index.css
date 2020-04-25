@@ -177,9 +177,30 @@ header h3 {
   text-shadow: 2px 2px 6px #000;
   text-align: center;
 }
-header .banner > div.headCon.banner img {
-  margin: 0;
-  justify-content: left ;
+@media (max-width:2000px) {
+  header img {
+    width: 200px;
+    margin: 0;
+    justify-content: left ;
+  }
+}
+@media (max-width:930px) {
+  header img {
+    padding: 2vh 2vw;
+    height: auto;
+    width: 100px;
+    margin-top: 9vh;
+    justify-content: left ;
+  }
+}
+@media (max-height:530px) {
+  header img {
+    padding: 2vh 2vw;
+    height: auto;
+    width: 100px;
+    margin-top: 16vh;
+    justify-content: left ;
+  }
 }
 /* Desktop t0 be written over */
 /*Header Container        */
@@ -187,6 +208,7 @@ header .banner > div.headCon.banner img {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  flex-wrap: wrap;
   height: 100%;
   margin-right: 6vw;
 }
@@ -202,10 +224,30 @@ div.bandCon > div.band {
   display: flex;
   flex-direction: row-reverse;
   box-sizing: border-box;
-  width: 46vw;
-  height: 13vh;
   background-color: rgba(24, 172, 218, 0.219);
   border: 2px solid black;
+}
+@media (max-width:2300px) {
+  div.bandCon > div.band {
+    width: 76vw;
+    height: 13vh;
+    padding: 0.2vw;
+  }
+}
+@media (max-width:863px) {
+  div.bandCon > div.band {
+    width: 76vw;
+    height: 13vh;
+    padding: 0.2vw;
+  }
+}
+@media (max-width:700px) {
+  div.bandCon > div.band {
+    width: 100vw;
+    height: 13vh;
+    padding: 0.2vw;
+    margin-top: 100px;
+  }
 }
 .band > .banner-item {
   display: flex;
@@ -346,22 +388,27 @@ footer div#footNav a {
 }
 @media (max-width: 2000px) {
   .blinking {
-    font-size: 12.6rem;
+    font-size: 2.4rem;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1115px) {
   .blinking {
-    font-size: 12.4rem;
+    font-size: 2rem;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 1018px) {
   .blinking {
-    font-size: 12rem;
+    font-size: 1.3rem;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 810px) {
   .blinking {
-    font-size: 13rem;
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 810px) {
+  .blinking {
+    font-size: 0rem;
   }
 }
 @keyframes blinkingText {
