@@ -125,6 +125,7 @@ table {
 }
 /*  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/banner-flowers.jpg') top left/cover no-repeat;  */
 /* Variables */
+/* Screen Settings */
 /*  Mixins */
 /* Less Stuff */
 html,
@@ -132,7 +133,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: white;
-  height: 280%;
+  height: 310%;
 }
 header {
   display: flex;
@@ -282,7 +283,7 @@ div.bandCon > div.band {
   margin-left: 16vw;
 }
 #workHistory table {
-  margin: 1em 0em 0em 7em;
+  margin: 6em 0em 0em 7em;
   width: 70%;
   height: 100%;
 }
@@ -325,7 +326,7 @@ footer div#footNav {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 18vh;
+  margin-top: 28vh;
   width: 68vw;
   height: 20vh;
   background-color: grey;
@@ -338,20 +339,29 @@ footer div#footNav a {
   text-decoration: underline wavy red;
   height: 0%;
 }
+/* Blinkings font-breakpoints */
 /* Classes */
 .blinking {
-  font-size: 1.5rem;
   animation: blinkingText 1.2s infinite;
-  /* Breakpoints for blinking*/
 }
-@media (max-width: 1375px) {
+@media (max-width: 2000px) {
   .blinking {
-    font-size: 1.2rem;
+    font-size: 12.6rem;
   }
 }
-@media (max-height: 798px) {
+@media (max-width: 1000px) {
   .blinking {
-    font-size: 1.2rem;
+    font-size: 12.4rem;
+  }
+}
+@media (max-width: 700px) {
+  .blinking {
+    font-size: 12rem;
+  }
+}
+@media (max-width: 700px) {
+  .blinking {
+    font-size: 13rem;
   }
 }
 @keyframes blinkingText {
