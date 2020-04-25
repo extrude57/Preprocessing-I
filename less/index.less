@@ -108,7 +108,7 @@ table {
 
 @media @bp1{
 	margin: 0 6vw; 
-	height: 100vh;
+	height: 90vh;
 	background-color:@header-color;
 }
 	
@@ -202,8 +202,10 @@ table {
 	// Puts the navbar in the upper right corner
 	display: flex;
 	flex-direction: row;
+	align-items: flex-start;
 	//align-items: center;
 	//flex-wrap: wrap;
+	width:100%;
   height: 100%;
   margin-right:1vw;
 	}
@@ -215,8 +217,7 @@ table {
 	display: flex;
 			flex-direction: row-reverse;
 			//align-self: right;
-			box-sizing: border-box;
-			
+			//box-sizing: border-box;
 			background-color: rgba(24, 172, 218, 0.219);
 			border:2px solid black;
 }
@@ -293,7 +294,7 @@ table {
 
 	@media @fbDft{width:76vw;height: 13vh;padding:.2vw;}
 	@media @sbp{width:76vw;height:13vh;padding:.2vw;}
-	@media @sbpM{width:100vw;height:13vh; padding:.2vw;margin-top: 100px;}
+	@media @sbpM{width:76vw;height:13vh; padding:.2vw;}
 
 	//863 580 || 820 643
 }
@@ -363,6 +364,7 @@ header{
   		div.band{
 			.band();
 			// Makes the acutal Navbar Container Wider
+			// at 600 X 665 Stack the Buttons
 			.nav-mv(@bp1nav-mv, @bp2nav-mv, @bp3nav-mv);
 			//position of buttons
 				.banner-item{
